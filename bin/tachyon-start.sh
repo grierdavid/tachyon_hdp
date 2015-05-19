@@ -167,11 +167,12 @@ ensure_dirs
 
 case "${WHAT}" in
   all)
-    check_mount_mode $2
-    stop $bin
-    start_master
-    sleep 2
-    $bin/tachyon-slaves.sh $bin/tachyon-start.sh worker $2
+     echo "Please use Ambari to start services on remote hosts"
+#    check_mount_mode $2
+#    stop $bin
+#    start_master
+#    sleep 2
+#    $bin/tachyon-slaves.sh $bin/tachyon-start.sh worker $2
     ;;
   local)
     stop $bin
@@ -197,14 +198,16 @@ case "${WHAT}" in
     run_safe
     ;;
   workers)
-    check_mount_mode $2
-    $bin/tachyon-slaves.sh $bin/tachyon-start.sh worker $2 $TACHYON_MASTER_ADDRESS
+    echo "Please use Ambari to start service on remote hosts"
+    #check_mount_mode $2
+    #$bin/tachyon-slaves.sh $bin/tachyon-start.sh worker $2 $TACHYON_MASTER_ADDRESS
     ;;
   restart_worker)
     restart_worker
     ;;
   restart_workers)
-    $bin/tachyon-slaves.sh $bin/tachyon-start.sh restart_worker
+    echo "Please use Ambari to start services on remote hosts"
+    #$bin/tachyon-slaves.sh $bin/tachyon-start.sh restart_worker
     ;;
   *)
     echo "Error: Invalid WHAT: $WHAT"

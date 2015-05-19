@@ -87,7 +87,7 @@ function status {
 
   keyword=$1
   count=0
-  for pid in `ps -A -o pid,command | grep -i "[j]ava" | grep $keyword | awk '{print $1}'`; do
+  for pid in `ps -A -o pid,command | grep -i "[j]ava" | grep $keyword.Tachyon | awk '{print $1}'`; do
     count=`expr $count + 1`
   done
   if [ $count -ne 0 ]

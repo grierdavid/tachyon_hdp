@@ -34,6 +34,8 @@ export TACHYON_MASTER_ADDRESS=master-02
 export TACHYON_UNDERFS_ADDRESS=$TACHYON_HOME/underfs
 export TACHYON_UNDERFS_ADDRESS=hdfs://master-01:8020
 export TACHYON_WORKER_MEMORY_SIZE=1GB
+export TACHYON_PID_DIR="/var/run/tachyon"
+export TACHYON_PID_FILE="$TACHYON_PID_DIR/tachyon.pid"
 export TACHYON_UNDERFS_HDFS_IMPL=org.apache.hadoop.hdfs.DistributedFileSystem
 
 CONF_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

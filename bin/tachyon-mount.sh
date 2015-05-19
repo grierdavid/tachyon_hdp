@@ -157,7 +157,7 @@ case "${1}" in
         mount_local $1
         ;;
       workers)
-        $bin/tachyon-slaves.sh $bin/tachyon-mount.sh $1
+        $bin/tachyon-mount.sh $1
         ;;
     esac
     ;;
